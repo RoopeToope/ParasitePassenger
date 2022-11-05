@@ -431,6 +431,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 290431692310564086, guid: 52bc953c2d751704f9fd21d14a45574e, type: 3}
+      propertyPath: m_Radius
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 534753136140430510, guid: 52bc953c2d751704f9fd21d14a45574e, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -759,6 +763,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7891839999491608812, guid: 9edccc1f92e19f74f80aa85739595ace, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7891839999491608814, guid: 9edccc1f92e19f74f80aa85739595ace, type: 3}
       propertyPath: m_Name
       value: Parasite
@@ -971,6 +979,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 290431692310564086, guid: 52bc953c2d751704f9fd21d14a45574e, type: 3}
+      propertyPath: m_Radius
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 534753136140430510, guid: 52bc953c2d751704f9fd21d14a45574e, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
