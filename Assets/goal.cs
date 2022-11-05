@@ -16,6 +16,7 @@ public class goal : MonoBehaviour {
                 triggerOn.Invoke();
             }
             characterInside++;
+            Win();
         }
 
     }
