@@ -98,7 +98,7 @@ CapsuleCollider:
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.000000059604645, y: 0, z: 0}
 --- !u!1 &3213565117598955425
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ Transform:
   m_GameObject: {fileID: 3213565117598955425}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.657, z: 0.581}
-  m_LocalScale: {x: -0.27519616, y: 0.29958, z: 0.29959}
+  m_LocalScale: {x: 0, y: 0.29958, z: 0.29959}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3213565117194434791}
@@ -207,9 +207,10 @@ GameObject:
   - component: {fileID: 3213565117699675161}
   - component: {fileID: 3213565117699675167}
   - component: {fileID: 3213565117699675166}
+  - component: {fileID: 3791401846699225286}
   m_Layer: 0
   m_Name: guards
-  m_TagString: Untagged
+  m_TagString: Host
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,8 +246,6 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   nearEnough: 1
 --- !u!195 &3213565117699675166
 NavMeshAgent:
@@ -270,3 +269,16 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!135 &3791401846699225286
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213565117699675160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5.45
+  m_Center: {x: 0, y: 0, z: 0}
