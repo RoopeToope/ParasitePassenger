@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 7e6eecf8780f896408cf718e34c4ffff
+  - enabled: 1
+    path: Assets/Scenes/GabriSandbox.unity
+    guid: 374aee462ed3c6746bfa893acb16e4d7
   m_configObjects: {}
