@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Lifepoints : MonoBehaviour {
-    public int maxHealth = 10;
+    public int maxHealth = 30;
     public int currentHealth;
     public healtBar healtbar;
     public bool parasiteAttach = false;
     public GameObject DeadBody;
+
+   /* public void OnTriggeStay(Collider other) {
+
+        InYou();
+
+    }
+    private void OnTriggerExit(Collider other) {
+        parasiteAttach = false;
+    }*/
     void Start() {
 
         // return (timer == 0) ? Destroy(gameObject) : TakeDamage(1);
@@ -53,4 +62,8 @@ public class Lifepoints : MonoBehaviour {
         currentHealth -= damage;
         healtbar.SetHealt(currentHealth);
     }
+   /* void InYou() {
+      parasiteAttach = true;
+    }*/
+    
 }
