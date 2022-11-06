@@ -52,10 +52,10 @@ public class ParasiteMover : MonoBehaviour {
             }
         }
         if (paraState == GameState.Hosted) {
-            transform.position = Vector3.MoveTowards(transform.position, host.transform.position + Vector3.up * 0.6f, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, host.transform.position + Vector3.up * 0.5f, speed * Time.deltaTime);
         }
         if (paraState == GameState.Missed) {
-            transform.position = Vector3.MoveTowards(transform.position, finalJump + Vector3.up * 0.6f, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, finalJump, speed * Time.deltaTime);
         }
     }
 
