@@ -13,6 +13,9 @@ public class ParasiteMover : MonoBehaviour {
     GameObject newHost;
     float triggerSize;
 
+    void Awake() {
+    }
+
     void OnTriggerStay(Collider other) {
         if (other.gameObject.CompareTag("Host")) {
             newHost = other.gameObject;
@@ -44,22 +47,29 @@ public class ParasiteMover : MonoBehaviour {
             if (host != null) {
                 host.GetComponent<SphereCollider>().enabled = true;
             }
-            if (ray1) { 
-            host = newHost;
-            paraState = GameState.Hosted;
-            host.GetComponent<SphereCollider>().enabled = false;
-            newHost = null;
+            if (ray1) {
+                host = newHost;
+                paraState = GameState.Hosted;
+                host.GetComponent<SphereCollider>().enabled = false;
+                newHost = null;
             }
         }
+        if (host != null) {
+            host.GetComponent<Lifepoints>().parasiteAttach = paraState == GameState.Hosted;
+        }
+
+        host.GetComponent<SphereCollider>().enabled = paraState != GameState.Hosted;
+
         if (paraState == GameState.Hosted) {
-            transform.position = Vector3.MoveTowards(transform.position, host.transform.position + Vector3.up * 0.5f, speed * Time.deltaTime);
+            if (host != null) {
+                transform.position = Vector3.MoveTowards(transform.position, host.transform.position + Vector3.up * 0.5f, speed * Time.deltaTime);
+            } else {
+                paraState = GameState.Missed;
+            }
         }
         if (paraState == GameState.Missed) {
             transform.position = Vector3.MoveTowards(transform.position, finalJump, speed * Time.deltaTime);
         }
-    }
-
-    void Awake() {
     }
 
     public float rotateMultiplier;
@@ -73,7 +83,7 @@ public class ParasiteMover : MonoBehaviour {
         RaycastHit hit;
         ray1 = Physics.Raycast(transform.position, aimDir, out hit, triggerSize);
         //print(triggerSize);
-        if (ray1) { 
+        if (ray1) {
             print("Shoot now!");
         }
     }
