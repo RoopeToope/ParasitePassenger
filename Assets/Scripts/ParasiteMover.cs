@@ -84,6 +84,7 @@ public class ParasiteMover : MonoBehaviour {
             }
         } else
             timer = playerLifetime;
+
     }
 
     //void maybeDestroy() {
@@ -104,9 +105,14 @@ public class ParasiteMover : MonoBehaviour {
         //var aimAngle = rotator.transform.eulerAngles.y; 
         RaycastHit hit;
         ray1 = Physics.Raycast(transform.position, aimDir, out hit, triggerSize);
+
+       // Vector3 direction = pointer.transform.position - transform.position;
+
+
         //print(triggerSize);
         if (ray1) {
             print("Shoot now!");
         }
+        
     }
 }
